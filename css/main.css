@@ -6,15 +6,13 @@ html {
   font-size: 16px;
 }
 
-li {
-  border: 1px solid red;
-}
 p {
   margin: 10px 0;
 }
 
+
 nav {
-  background-color: salmon;
+  background-color: #1e5f82;
 }
 
 .navigation {
@@ -24,13 +22,18 @@ nav {
 }
 
 .navigation li {
-  padding: 0 10px;
+  padding: 3px 10px;
+}
+
+.navigation li a {
+  color: ivory;
+  text-decoration: none;
 }
 
 header {
   padding: 20px;
   height: 200px;
-  background-color: #ccc;
+  background-color: #f4f3f1;
 }
 
 .header-container {
@@ -123,16 +126,54 @@ h2 {
   outline: none;
 }
 
+ /* social styles */
+
+ .social-container {
+   display: flex;
+   flex-direction: column;
+ }
+
+ .red-bubble, .pinterest, .instagram {
+   border: 1px solid black;
+   width: 100%;
+   height: 60px;
+   margin-top: 15px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
 
 
+ /* footer styles */
+
+footer  {
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+footer img {
+
+  width: 100px;
+}
+
+.image-container {
+  margin: 25px 0;
+  text-align: center;
+
+}
+
+.tiny-container {
+  height: 25px;
+  background: #ccc;
+}
 
 
-
-
-
-@media screen and (min-device-width: 1024px) {
+@media screen and (min-device-width: 960px) {
   .container, .navigation, .header-container {
-    max-width: 1000px;
+    max-width: 960px;
     margin: 0 auto;
   }
 
@@ -159,11 +200,12 @@ h2 {
   }
 
   /* contact styles */
+
  .contact-container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 40px 20px;
+    padding: 100px 20px;
   }
   .contact-container .description {
     flex: 1;
@@ -172,4 +214,18 @@ h2 {
   .contact-container .form {
     flex: 3;
   }
+
+  /* social styles */
+
+  .social-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .red-bubble, .pinterest, .instagram {
+    flex: 1;
+  }
+
+  /* footer styles */
+
 }
