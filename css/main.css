@@ -15,15 +15,32 @@ p {
 .burger-rings {
   width: 25px;
   position: absolute;
+  right: 10px;
+  top: 15px;
+  z-index: 2;
+}
+#burger {
+  display: none;
+}
+#burger:checked ~ nav .navigation {
+  padding-bottom: 10px;
+}
+#burger:checked ~ nav li {
+  text-align: center;
+  height: auto;
+  opacity: 1;
+  padding: 7px 0;
+  transition: all .5s ease-in;
 }
 
 .burger-rings span {
   width: 100%;
   height: 5px;
   display: block;
-  background-color: black;
+  background-color: #f4f3f1;
   position: absolute;
   top: 9px;
+  border-radius: 2.5px;
 }
 
 .burger-rings span:first-child {
@@ -34,19 +51,23 @@ p {
 }
 
 
-
 nav {
   background-color: #1e5f82;
+  padding-top: 50px;
+  transition: all .5s ease-in;
 }
 
 .navigation {
   display: flex;
   justify-content: flex-end;
+  flex-direction: column;
   margin: 0 auto;
 }
 
 .navigation li {
-  padding: 3px 10px;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
 }
 
 .navigation li a {
@@ -196,6 +217,25 @@ footer img {
 
 
 @media screen and (min-device-width: 960px) {
+
+  nav {
+    padding-top: 0;
+  }
+
+  .burger-rings {
+    display: none;
+  }
+
+  .navigation {
+    flex-direction: row;
+  }
+
+  .navigation li {
+    height: auto;
+    opacity: 1;
+    padding: 3px 10px;
+  }
+
   .container, .navigation, .header-container {
     max-width: 960px;
     margin: 0 auto;
