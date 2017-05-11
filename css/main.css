@@ -11,9 +11,7 @@ h2, h3 {
   margin: 0 0 1.1em 0;
 }
 
-a {
-  text-decoration: none;
-}
+
 
 /* hamburger style */
 
@@ -78,8 +76,62 @@ nav {
 
 .navigation li a {
   color: ivory;
+  outline: none;
   text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 400;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
 }
+
+/* experiment */
+
+
+nav a:hover,
+nav a:focus {
+	outline: none;
+}
+
+/* Effect 1: Brackets */
+
+.text-effect a::before,
+.text-effect a::after {
+	display: inline-block;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	transition: transform 0.3s, opacity 0.2s;
+}
+
+.text-effect a::before {
+	margin-right: 10px;
+	content: '[';
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
+}
+
+.text-effect a::after {
+	margin-left: 10px;
+	content: ']';
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	transform: translateX(-20px);
+}
+
+.text-effect a:hover::before,
+.text-effect a:hover::after,
+.text-effect a:focus::before,
+.text-effect a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+}
+
+/* end of the experiment */
+
+/* header styles */
 
 header {
   padding: 20px;
@@ -93,8 +145,13 @@ header {
 h1 {
   font-size: 3em;
 }
+
 h2 {
   font-size: 2em;
+}
+
+h4 {
+  font-size: 1.414em;
 }
 
 
@@ -198,10 +255,12 @@ h2 {
    display: flex;
    align-items: center;
    justify-content: center;
-
+ 
    transition: all 0.9s ease;
    background:#676470;
    color:#fff;
+   text-decoration: none;
+
  }
 
  /* footer styles */
@@ -281,9 +340,15 @@ footer img {
    font-size: 3.998em;
   }
 
-  h2 {font-size: 2.827em;}
+  h2 {
+    font-size: 2.827em;
+    text-transform: uppercase;
+  }
 
-  h3 {font-size: 1.999em;}
+  h3 {
+    font-size: 1.999em;
+    text-transform: uppercase;
+  }
 
   header {
     height: 630px;
@@ -308,8 +373,9 @@ footer img {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    height: 350px;
 
-    padding: 4em 8% 4em 10%;
+    padding: 100px 0;
   }
 
   .about-container img {
