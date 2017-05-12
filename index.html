@@ -7,9 +7,24 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
+
     <title>My Portfolio</title>
 
     <link href='http://fonts.googleapis.com/css?family=Lato:400' rel='stylesheet' type='text/css'>
+
+
+<!-- failed lazyload experiment
+     <script src="jquery.js"></script>
+     <script>
+     console.log($("img.lazy").length); // this will log 0
+      $("img.lazy").lazyload({
+         effect : "fadeIn"
+      });
+     </script>
+    <script src="jquery.lazyload.js"></script>
+
+ http://stackoverflow.com/questions/16868694/jquery-lazy-loading-not-working-properly -->
+
   </head>
 
   <body>
@@ -31,11 +46,18 @@
       </ul>
     </nav>
 
-    <header  id="about">
+    <header id="about">
+
       <div class="header-container">
         <img src="" alt="">
-        <h1 class="name">Josie&nbsp;&nbsp;Nagy</h1>
+
+        <nav>
+          <h1 class="name">Josie&nbsp;&nbsp;Nagy</h1>
+        </nav>
+
       </div>
+
+
     </header>
 
     <div class="container">
@@ -44,7 +66,10 @@
       <div class="about-container">
 
         <div class="image-container">
-          <img src="images/josie.jpg" alt="">
+          <!-- failed lazyload experiment
+       <img class="lazy" src="images/arrow.svg" data-original="images/josie.jpg" width="150" height="150">
+          -------------------------------->
+       <img src="images/josie.jpg" alt="">
         </div>
 
         <div class="description-container">
@@ -142,12 +167,11 @@
        </div>
 
      </footer>
-
-     <div class="arrow-to-top">
-       <a href="#">
-         <img src="images/arrow.svg">
-       </a>
-     </div>
+     <div>
+           <a href="#" id="ui-to-top" class="ui-to-top active">
+           </a>
+    </div>
 
   </body>
+
 </html>
