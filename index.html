@@ -4,13 +4,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
-
     <title>My Portfolio</title>
 
     <link href='http://fonts.googleapis.com/css?family=Lato:400' rel='stylesheet' type='text/css'>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="javascript/scroll-to-top-feature.js"></script>
+
+    </script>
 
 
 <!-- failed lazyload experiment
@@ -40,6 +44,7 @@
     <nav class="text-effect" id="text-effect">
 
       <ul class="navigation" id="navigation">
+        <img src="images/donut.svg" width="39px" height="39px" alt="">
         <li><a href="#about" href="text-effect">ABOUT</a></li>
         <li><a href="#portfolio" href="text-effect">PORTFOLIO</a></li>
         <li><a href="#contact" href="text-effect">CONTACT</a></li>
@@ -48,17 +53,13 @@
 
     <header id="about">
 
-      <div class="header-container">
-        <img src="" alt="">
+      <div class="header-container pattern">
 
-        <nav>
-          <h1 class="name">Josie&nbsp;&nbsp;Nagy</h1>
-        </nav>
-
-      </div>
+       <h1 class="name">Josie&nbsp;&nbsp;Nagy</h1>
 
 
     </header>
+
 
     <div class="container">
 
@@ -73,8 +74,9 @@
         </div>
 
         <div class="description-container">
-          <h2>About me</h2>
-          <p>i am josie.. i am a good programmer. i will do lot of drawings</p>
+          <h2>Hello!</h2>
+          <p>My name is Josie Nagy.
+          <p>I'm a visual designer who enjoyes solving problems in many different mediums.</p>
           <p>if you like to contact me.. plz dont!</p>
           <p>if you like to contact me.. plz dont!</p>
           <p>if you like to contact me.. plz dont!</p>
@@ -118,7 +120,7 @@
 
       <div class="project">
         <div class="image-container">
-          <img src="images/josie.jpg" alt="">
+          <img src="iimages/josie.jpg" alt="">
         </div>
         <div class="description-container">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </p>
@@ -130,19 +132,20 @@
 
 
        <div class="description">
+         <img src="images/email.svg" class="email" alt="email">
          <h4>Contact</h4>
-         <p>If you have a design request or you’d like to know what the options are,
+         <p>If you're interested in my services as a designer or you’d like to know what the options are,
            feel free to send me an email with your idea, time frame and budget.</p>
-           <p>I’ll get back to you within a few days.</p>
+           <p>I try to respond to contact requests within two days, but I usually make an effort to reply to all messages the day I receive them.</p>
        </div>
 
 
        <div class="form">
          <form class="" action="index.html" method="post">
-           <input type="text" name="" value="" placeholder="Name">
+           <input type="text" name="" value="" placeholder="Your Name">
            <input type="email" name="" value="" placeholder="Email">
-           <textarea rows="4" name="message" rows="8" cols="80" placeholder="Type your Message here!"></textarea>
-           <input type="submit" name="" value="Send Message">
+           <textarea rows="4" name="message" rows="8" cols="80" placeholder="Your Message"></textarea>
+           <input type="submit" name="" value="Say Hello!">
          </form>
        </div>
 
@@ -150,9 +153,9 @@
      </div>
 
      <div class="social-container">
-       <a class="red-bubble" href="http://www.redbubble.com/people/josieprints" href="text-effect">RedBubble</a>
-       <a class="pinterest" href="http://www.redbubble.com/people/josieprints" href="text-effect">Pinterest</a>
-       <a class="instagram" href="http://www.redbubble.com/people/josieprints" href="text-effect">Instagram</a>
+       <a class="red-bubble" href="http://www.redbubble.com/people/josieprints" href="text-effect" target="_blank">RedBubble</a>
+       <a class="pinterest" href="https://ro.pinterest.com/oozefina/" href="text-effect">Pinterest</a>
+       <a class="instagram" href="https://www.instagram.com/josie_patterns/" href="text-effect">Instagram</a>
     </div>
    </nav>
 
@@ -164,11 +167,14 @@
        </div>
 
        <div class="tiny-container">
+         <p> © Josie Nagy </p>
        </div>
 
      </footer>
+
      <div>
-           <a href="#" id="ui-to-top" class="ui-to-top active">
+           <a href="#" id="ui-to-top" class="ui-to-top  active">
+             <span class="fa fa-angle-up"></span>
            </a>
     </div>
 

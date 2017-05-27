@@ -11,9 +11,15 @@ h2, h3 {
   margin: 0 0 1.1em 0;
 }
 
+.fa-bookmark {
+  font-size: 30px;
+  color: ivory;
+}
 
 
-/* hamburger style */
+/*------------------------------------*\
+   #HAMBURGER MENU
+\*------------------------------------*/
 
 .burger-rings {
   width: 25px;
@@ -22,9 +28,11 @@ h2, h3 {
   top: 15px;
   z-index: 2;
 }
+
 #burger {
   display: none;
 }
+
 #burger:checked ~ nav .navigation {
   padding-bottom: 10px;
 }
@@ -53,7 +61,13 @@ h2, h3 {
   top: 18px;
 }
 
-/* nav bar styles */
+
+
+
+/*------------------------------------*\
+  #NAV BAR STYLES
+\*------------------------------------*/
+
 
 nav {
   background-color: #304B58;
@@ -84,7 +98,12 @@ nav {
 	text-shadow: 0 0 1px rgba(255,255,255,0.3);
 }
 
-/* experiment - hover effects nav bar items*/
+
+
+
+/*------------------------------------*\
+  #HOVER EFFECTS FOR NAV BAR ITEMS
+\*------------------------------------*/
 
 
 nav a:hover,
@@ -92,7 +111,9 @@ nav a:focus {
 	outline: none;
 }
 
-/* Effect 1: Brackets */
+
+/* Effect: Brackets */
+
 
 .text-effect a::before,
 .text-effect a::after {
@@ -130,15 +151,23 @@ nav a:focus {
 }
 
 
-/* header styles */
+
+
+
+
+/*------------------------------------*\
+  #HEADER STYLES
+\*------------------------------------*/
+
 
 header {
   padding: 20px;
   height: 200px;
-  background-color: #F6FAF9;
+  background-color: #F0F5F8;
 
   display: flex;
 }
+
 
  h1 {
    text-align: center;
@@ -188,7 +217,6 @@ header {
 }
 
 
-
 h2 {
   font-size: 2em;
 }
@@ -198,7 +226,13 @@ h4 {
 }
 
 
-/* about styles */
+
+
+
+/*------------------------------------*\
+  #ABOUT STYLES
+\*------------------------------------*/
+
 
 .about-container {
   display: flex;
@@ -223,7 +257,12 @@ h4 {
 }
 
 
-/* portfolio styles */
+
+
+
+/*------------------------------------*\
+  #ABOUT STYLES
+\*------------------------------------*/
 
 .project {
   display: flex;
@@ -240,11 +279,29 @@ h4 {
   padding: 0 20px;
 }
 
+.email {
+  height: 50px;
+  margin: 7px auto;
 
-/* contact styles */
+  padding-right: 139px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #CONTACT STYLES
+\*------------------------------------*/
 
 .contact-container {
   padding: 20px;
+}
+
+.description h4 {
+  padding-bottom: 23px;
 }
 
 .contact-container input[type="text"],
@@ -283,7 +340,14 @@ h4 {
   outline: none;
 }
 
- /* social styles */
+
+
+
+
+/*------------------------------------*\
+  #SOCIAL BUTTONS STYLES
+\*------------------------------------*/
+
 
  .social-container {
    display: flex;
@@ -306,17 +370,21 @@ h4 {
 
  }
 
- /* footer styles */
+
+
+
+
+ /*------------------------------------*\
+   #FOOTER STYLES
+ \*------------------------------------*/
 
 footer  {
-
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
 footer img {
-
   width: 100px;
 }
 
@@ -330,11 +398,20 @@ footer img {
   background: #162328;
 }
 
-/* arrow to top style */
+
+
+
+
+
+ /*------------------------------------*\
+   #ARROW BACK TO TOP STYLES
+ \*------------------------------------*/
+
 
 .ui-to-top {
   right: 15px;
   bottom: 15px;
+  opacity: 0;
 
   width: 50px;
   height: 50px;
@@ -368,32 +445,58 @@ footer img {
   transform: translateY(0);
 }
 
+.ui-to-top .arrow {
+  padding-bottom: 2px;
+}
+
+
+
+
 
 
 @media screen and (min-device-width: 940px) {
 
-  /* arrow to top style */
+  /**
+  For Smartphone and Tablet Viewports
+  */
+
+
+
+
+
+ /*------------------------------------*\
+    #ARROW BACK TO TOP STYLE - MQ
+\*------------------------------------*/
+
 
   .ui-to-top {
+    position: fixed;
+    overflow: hidden;
+    opacity: 0;
+
     right: 49px;
-    bottom: 60px;
+    bottom: -55px;
 
     width: 50px;
     height: 50px;
+
     font-size: 24px;
     line-height: 46px;
     color: #FFF;
-    background: #619AB5;
-    border-radius: 50%;
-    position: fixed;
-    overflow: hidden;
     text-align: center;
     text-decoration: none;
+
+    background: #619AB5;
+    border-radius: 50%;
+
     z-index: 20;
-    transition: .4s all ease;
+    transition: bottom 1s ease, opacity 3s, color 0.4s ease, background-color 0.4s ease;
+
+    /*transition: .4s all ease; */
     -webkit-transform: translateY(100px);
     transform: translateY(100px);
   }
+
 
   .ui-to-top:hover {
     color: #FFF;
@@ -401,9 +504,11 @@ footer img {
     text-decoration: none;
   }
 
+
   .ui-to-top:focus {
     color: #fff;
   }
+
 
   .ui-to-top.active {
     -webkit-transform: translateY(0);
@@ -411,16 +516,32 @@ footer img {
   }
 
 
- /* burger menu style */
+
+
+
+
+  /*------------------------------------*\
+    #BURGER MENU STYLE - MQ
+  \*------------------------------------*/
+
 
   .burger-rings {
     display: none;
   }
 
-  /* nav bar styles */
+
+
+  /*------------------------------------*\
+    #NAV BAR STYLES - MQ
+  \*------------------------------------*/
+
 
   nav {
     padding-top: 0;
+  }
+
+  nav:hover {
+    background-color: rgba(110,173,204,0.8);
   }
 
   .navigation {
@@ -438,7 +559,13 @@ footer img {
     letter-spacing: 1px;
   }
 
-  /* header and main title styles */
+
+
+
+  /*------------------------------------*\
+     #HEADER AND MAIN TITLE STYLES - MQ
+  \*------------------------------------*/
+
 
 
   h1 {
@@ -452,33 +579,45 @@ footer img {
      color: #000;
     }
 
+
   h2 {
     font-size: 2.827em;
     text-transform: uppercase;
   }
+
 
   h3 {
     font-size: 1.999em;
     text-transform: uppercase;
   }
 
+
   header {
-    height: 630px;
+    height: 657px;
+    background-color: #208AAE;
   }
+
 
     #about .header-container img {
       border: 1 px solid black;
 
       justify-content: center;
-
     }
+
 
   .container, .navigation, .header-container {
     max-width: 940px;
     margin: 0 auto;
   }
 
-  /* about styles */
+
+
+
+
+  /*------------------------------------*\
+    #ABOUT STYLES - MQ
+  \*------------------------------------*/
+
 
 
   .about-container {
@@ -496,7 +635,16 @@ footer img {
     border-radius: 50%;
 }
 
-  /* project styles */
+
+
+
+
+
+
+  /*------------------------------------*\
+    #PROJECT STYLES - MQ
+  \*------------------------------------*/
+
 
   p {
     font-size: 16px;
@@ -505,25 +653,37 @@ footer img {
     margin-bottom: 20px;
   }
 
+
   .project {
     flex-direction: row;
     align-items: center;
   }
+
   .project:nth-child(2n+1) {
     flex-direction: row-reverse;
   }
+
   .project img {
     max-width: 100%;
   }
+
   .project .image-container {
     flex: 1;
   }
+
   .project .description-container {
     flex: 1;
     padding-left: 10px;
   }
 
-  /* contact styles */
+
+
+
+
+  /*------------------------------------*\
+    #CONTACT STYLES - MQ
+  \*------------------------------------*/
+
 
  .contact-container {
     display: flex;
@@ -531,31 +691,59 @@ footer img {
     align-items: center;
     padding: 100px 20px;
   }
+
   .contact-container .description {
     flex: 1;
     margin-right: 20px;
   }
+
   .contact-container .form {
     flex: 3;
   }
 
-  /* social styles */
+
+
+
+
+  /*------------------------------------*\
+    #SOCIAL BUTTONS STYLES - MQ
+  \*------------------------------------*/
+
 
   .social-container {
     display: flex;
     flex-direction: row;
   }
 
+
   .red-bubble, .pinterest, .instagram {
     flex: 1;
   }
 
+
   .red-bubble:hover,
   .pinterest:hover,
   .instagram:hover {
-   background-color: #53a7ea;
- }
+  background-color: #53a7ea;
+}
 
-  /* footer styles */
+
+
+
+
+ /*------------------------------------*\
+   #FOOTER STYLES - MQ
+ \*------------------------------------*/
+
+
+.tiny-container p {
+   color: #fff;
+   text-align: center;
+   font-size: 14px;
+   font-weight: 400;
+
+   margin-top: 3px;
+   margin-bottom: 0px;
+  }
 
 }
